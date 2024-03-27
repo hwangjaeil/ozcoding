@@ -1,0 +1,35 @@
+<!--
+    form태그 사용자가 입력한 데이터를 서버로 보내는 것
+    입력양식이 사용된 페이지의 예 - 로그인, 회원가입, 검색어 입력 페이지
+    서버란 정보를 제공하는 호스트(host)
+    form입력 값을 서버 측으로 제출할 수 있다
+    action 입력값을 전송할 서버의 url
+    method 클라이언트가 입력한 데이터를 어떤 식으로 전송할지(GET or POST)
+      - get서버에 요청을 보내어 응답을 받아낸다 /가져오겠다
+      - post 서버에 요청을 보내어 작업을 수행한다 /조작하겠다
+    입력요소 구별 식별자 name
+-->
+
+ <!DOCTYPE html>
+ <html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>양식을 만들고 입력 정보를 보내자</title>
+    </head>
+    <body>
+        <form action="none.com" method="post">
+
+            <label for="name">이름</label>
+            <input id="name" type="text" name="name">
+            <br>
+            <label for="age">나이</label>
+            <input id="age" type="number" name="age">
+            <br>
+            <label for="character">성격</label>
+            <textarea id="character" name="character">
+            </textarea>
+            <br>
+            <input type="submit">
+        </form>
+    </body>
+ </html>

@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+ <html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>선택자 더 보기</title>
+        <style>
+            /*
+            기호와 함께 사용하는 속성 선택자
+            * : 값의 포함 여부
+            ^ : 값의 시작 여부
+            $ : 값의 끝 여부
+            */
+
+            [width $= "0"]{
+                border: 5px dashed red;
+            }
+            /* > 바로 하나 아래 */
+            p > em{
+                color: blue;
+            }
+            /* +인접(다음) ~모든 형제
+                형제 선택자는 뒤이어 등장하는 형제들을 대상으로 한다. */
+            #sam ~ p{
+                color: orange;
+            }
+
+        </style>
+    </head>
+    <body>
+        <img src="images/다운로드.jpeg" width="120" alt="서울">
+        <img src="images/다운로드.jpeg" width="120">
+        <img src="images/다운로드.jpeg" width="233" id="sam">
+        <p>오즈코딩스쿨은 이한별 대표님이 설립한 교육기관입니다.</p>
+        <p>오즈코딩은 zep을 통한 메타버스 환경에서 부트캠프가 운영됩니다.</p>
+        <p>그렇지만 직접 신사에 있는 <em>오프라인교육장</em>에서도 공부할 수 있습니다.</p>
+        <p>오즈코딩스쿨의 백엔드개발과정은 약 6개월 가량 진행됩니다.</p>
+    </body>
+ </html>
